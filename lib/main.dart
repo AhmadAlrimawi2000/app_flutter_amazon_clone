@@ -1,5 +1,5 @@
 import "package:amazon_clone/constants/global_variables.dart";
-import "package:amazon_clone/features/authentication/screens/auth_screen.dart";
+import "package:amazon_clone/features/authentication/screens/login_screen.dart";
 import "package:amazon_clone/router.dart";
 import "package:flutter/material.dart";
 
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Amazon Clone',
       theme: ThemeData(
+        fontFamily: "Poppins",
         colorScheme: const ColorScheme.light(
           primary: GlobalVariables.backgroundColor,
           surface: GlobalVariables.secondaryColor,
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const AuthScreen(),
+      home: const LoginScreen(),
       onGenerateRoute: (settings) => generateRoute(settings),
     );
   }
